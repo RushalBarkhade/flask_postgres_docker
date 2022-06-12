@@ -7,11 +7,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello Worl      d"
+    return "Hello World"
 
 @app.route('/create',methods=["POST"])
 def add_user():
-    print("USER")
     try:
         conn = get_db_connection()
         json_data=json.loads(request.data)
